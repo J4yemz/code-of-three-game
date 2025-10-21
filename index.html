@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CODE OF THREE GAME</title>
+  <link rel="icon" href="/random-numbers-3/numbers.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<style>
+
+  *{
+    font-family: "Poppins";
+  }
+
+  body{
+    background-color: rgb(111, 121, 129);
+    color: white;
+  }
+
+  .title-container{
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .numbers-container, .btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 50px;
+  }
+
+  h2{
+    font-weight: 400;
+  }
+
+  .btn-container{
+    margin-top: 30px;
+  }
+
+  button{
+    padding: 20px 50px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: rgb(237, 71, 102);
+    color: white;
+  }
+
+  button:hover{
+    background-color: hsl(349, 82%, 70%);
+  }
+
+  .resultTextcss{
+    background-color: rgb(245, 218, 167);
+    color: rgb(132, 42, 59);
+    padding: 2px 4px;
+  }
+  
+  .description1, .description2, .description3{
+    width: 300px;
+    text-align: justify;
+    font-size: 12px;
+    padding: 10px 20px
+  }
+
+  .description1{
+    background-color: rgb(132, 42, 59);
+  }
+
+  .description2{
+    background-color: rgb(245, 218, 167);
+    color: rgb(132, 42, 59);
+  }
+
+  .description3{
+    background-color: rgb(163, 72, 90);
+  }
+
+  .result1, .result2, .result3{
+    background-color: hsl(180, 43%, 41%);
+    color: rgb(255, 255, 255);
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: inset 2px 2px;
+  }
+
+  .rollDiceBtn{
+    background-color: rgb(30, 184, 30);
+  }
+
+  .rollDiceBtn:hover{
+    background-color:  hsl(120, 72%, 52%);
+  }
+
+</style>
+<body>
+
+  <div class="title-container">
+    <h1 style="color: hsl(148, 41%, 88%); font-size: 2.75em; text-shadow: 2px 2px 8px rgb(59, 59, 59);">CODE OF THREE GAME</h1>
+    <p class="description1">This game will generate 3 random numbers. If three numbers are the same value it will say, "Wow! 3 numbers have the same value!"</p>
+    <p class="description2">If 2 numbers are the same value it will say, "Yehey! two numbers have the same value!"</p>
+    <p class="description3">If no number have the same value it will say, "There are no numbers that have the same value"</p>
+    <p class="resultTextcss" id="result">Result:</p>
+  </div>
+
+  <div class="numbers-container" id="randomNumbers">
+    <h2 class="result1" id="num1">num1</h2>
+    <h2 class="result2" id="num2">num2</h2>
+    <h2 class="result3" id="num3">num3</h2>
+  </div>
+
+  <div class="btn-container">
+
+    <button onclick="resetDice()">Reset</button>
+    <button class="rollDiceBtn" onclick="rollDice()">Dice</button>
+    
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
