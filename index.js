@@ -14,6 +14,10 @@ function getrandomNumber(){
 }
 
 function rollDice(){
+
+  randomNum1 = getrandomNumber();
+  randomNum2 = getrandomNumber();
+  randomNum3 = getrandomNumber();
   
   document.getElementById("num1").innerHTML = randomNum1;
   document.getElementById("num2").innerHTML = randomNum2;
@@ -26,6 +30,7 @@ function rollDice(){
   } else{
     document.getElementById("result").innerHTML = checkNum1; 
   }
+  
 }
 
 function resetDice(){
